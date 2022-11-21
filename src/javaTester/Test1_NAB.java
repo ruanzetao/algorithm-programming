@@ -39,4 +39,22 @@ public class Test1_NAB {
 
 		return result;
 	}
+
+	int solution3(int[] A) {
+		int result = 0;
+		int i = 0;
+		int j = 0;
+		int N = A.length;
+		while (i < N) {
+			if (A[i] == A[j])
+				result = Math.max(result, Math.abs(i - j));
+			if (j < N - 1) {
+				j++;
+			} else {
+				j = 0;
+				i++;
+			}
+		}
+		return result;
+	}
 }
